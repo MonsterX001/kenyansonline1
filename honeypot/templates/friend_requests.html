@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" lang="en"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenyahoneypot.com</title>
+    <link rel="stylesheet" href="{% static 'styl.css' %}"/>
+    <link rel="stylesheet" href="{% static 'account.css' %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<nav class="navigation">
+    <div id="topnav" >
+        <div class="navbar">
+            <a  href="/" ><div class="navlogo"> <h3>Kenyans</h3><h4>Online</h4> <h1>K O</h1></div></a>
+        </div>
+   
+       </div>  
+    <div id="smallnav">   
+        
+            <a id="adds" href="/acc-profile">PROFILE</a>
+        
+        <br><br>
+        <form method="POST" action="/search">
+            {% csrf_token %}
+            <input type="search" action="/search" class="search" placeholder="search" name="searched"><button type="submit" class="searchbutton"><i class="fa fa-search" font-size="18px"></i></button>      
+        </form> 
+    </div>
+     
+    <div id="nav1">
+            
+                <a href="/">Home</a>&nbsp;
+          
+            
+                <a href="/livechat">live-chat</a>&nbsp;
+            
+            
+                <a href="/hookup">social-book</a>&nbsp;
+           
+                <a href="/shotss">shots</a>
+                <a href="/terms-policy">privacy</a>
+                
+                <a id="adds" href="/acc-profile">PROFILE</a>
+                
+                <br><br>
+                <form method="POST" action="/search">
+                {% csrf_token %}
+                    <input type="search" action="/search" class="search" placeholder="search" name="searched"><button type="submit" class="searchbutton"><i class="fa fa-search"></i></button>      
+                </form>     
+    </div>    
+    
+    <label>
+    <a href="logout" height="40px"><i class="fa fa-sign-out" id="btnn">out</i></a>
+    </label>
+
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fa fa-bars" id="btn"></i>
+        <i class="fa fa-times" id="cancel"></i>
+    </label>
+
+<div class="sidebar">
+    
+
+    <header class="navbar"><h3>Kenyans</h3><h4>Online</h4></header>
+
+    <ul>
+        <li><a href="/" ><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="/livechat"><i class="fa fa-comments"></i>live-chat</a></li>
+        <li><a href="/hookup" ><i class="fa fa-address-card"></i> Social-book</a></li>
+        <li><a href="/shotss" ><i class="fa fa-camera-retro"></i> Shots</a></li>
+        <li><a href="/acc-profile"><i class="fa fa-user-circle-o"></i> Profile</a></li>
+        <li><a href="/terms-policy"><i class="fa fa-fa fa-eye-slash"></i> privacy policy</a></li>
+    </ul>
+</div> 
+</nav>
+
+
+<body>
+    <style>
+        body{
+            padding-top: 50px;
+        }
+        h5{
+            color: rgba(240, 248, 255, 0.712);
+            display: inline;
+        }
+       section{
+        padding-top:100px;
+       }
+        
+        
+        p{
+            color: rgba(255, 255, 255, 0.897);
+            font-weight: 100;
+        }
+        
+        
+        .sidebar{
+            margin-top:10px;
+            text-align: left;
+        }
+        
+        .navlogo h1{
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: oblique;
+        color: #ff3e0e;
+        }
+        h1{
+        font-size: 16px;
+        font-weight: 700;
+        background-color: rgb(19, 92, 1);
+        border-radius: 10px;
+    }
+    </style>
+<section class="container">
+    
+    <h2>Friend Requests</h2>
+  {% if received_requests %}
+    <h3>Received Requests:</h3>
+    <ul>
+      {% for request in received_requests %}
+        <li>
+          {{ request.from_user.username }}
+          <form action="{% url 'main:accept_friend_request' request.id %}" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Accept">
+          </form>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  {% if sent_requests %}
+    <h3>Sent Requests:</h3>
+    <ul>
+      {% for request in sent_requests %}
+        <li>{{ request.to_user.username }} (pending)</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+
+
+
+</section>
+<footer>
+    
+    <div id="copywrite">
+    <p>UPLOAD VIDEOS AND EARN Ksh.50 PER VIEW</p>
+    <p>&copy HoneyPot
+    </p>
+    </div>
+
+</footer>
+<script src="{% static 'nav.js' %}"></script>
+<script src="{% static 'main.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block shots %}
+<body>
+    <style>
+        body{
+            margin-top: 60px;
+        }
+    </style>
+    {% for message in messages %}
+    <h5>message{{ message }}</h5>
+    {% endfor %}
+    <div class="houses">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+    
+            <label><h4>Shot Video Name</h4></label><br>
+            <input type="text" id="housename" name="housename" required><br>
+    
+            <label><h4>UPLOAD SHOT-VIDEO</h4></label><br>
+            <input type="file" id="file_input" name="mainimg" accept="video" required><br>
+            
+            <label><h4>Caption</h4></label><br>
+            <div id = "textarea">
+            <textarea type="textarea" name="details" id="contacts" required></textarea><br>
+            </div>
+            <button type="submit">POST</button>
+        </form>
+    </div>
+    
+</body>
+{% endblock %}

@@ -1,0 +1,227 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" lang="en"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenyahoneypot.com</title>
+    <link rel="stylesheet" href="{% static 'styl.css' %}"/>
+    <link rel="stylesheet" href="{% static 'account.css' %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<nav class="navigation">
+    <div id="topnav" >
+        <div class="navbar">
+            <a  href="/" ><div class="navlogo"> <h3>Kenyans</h3><h4>Online</h4> <h1>K O</h1></div></a>
+        </div>
+   
+       </div>  
+    <div id="smallnav">   
+        
+        <a id="adds" href="/acc-profile">PROFILE</a>
+        
+        <br><br>
+        <form method="POST" action="/search">
+            {% csrf_token %}
+            <input type="search" action="/search" class="search" placeholder="search" name="searched"><button type="submit" class="searchbutton"><i class="fa fa-search" font-size="18px"></i></button>      
+        </form> 
+    </div>
+     
+    <div id="nav1">
+            
+                <a href="/">Home</a>&nbsp;
+                <a href="/recommended">Recommended</a>&nbsp;
+          
+            
+                <a href="/livechat">Trending</a>&nbsp;
+
+                <a href="/livechat">Live</a>&nbsp;
+
+                <a href="/livechat">Leaked</a>&nbsp;
+            
+            
+                <a href="/hookup">Social-book</a>&nbsp;
+           
+                <a href="/shotss">Shots</a>
+                <a href="/terms-policy">Privacy</a>
+                
+                <a id="adds" href="/acc-profile">PROFILE</a>
+               
+                <br><br>
+                <form method="POST" action="/search">
+                {% csrf_token %}
+                    <input type="search" action="/search" class="search" placeholder="search" name="searched"><button type="submit" class="searchbutton"><i class="fa fa-search"></i></button>      
+                </form>     
+    </div>    
+    
+    <label>
+    <a href="logout" height="40px"><i class="fa fa-sign-out" id="btnn">out</i></a>
+    </label>
+
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fa fa-bars" id="btn"></i>
+        <i class="fa fa-times" id="cancel"></i>
+    </label>
+
+<div class="sidebar">
+    
+
+    <header class="navbar"><h3>Kenyans</h3><h4>Online</h4></header>
+
+    <ul>
+        <li><a href="/" ><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="/livechat"><i class="fa fa-comments"></i>live-chat</a></li>
+        <li><a href="/hookup" ><i class="fa fa-address-card"></i> Social-book</a></li>
+        <li><a href="/shotss" ><i class="fa fa-camera-retro"></i> Shots</a></li>
+        <li><a href="/acc-profile"><i class="fa fa-user-circle-o"></i> Profile</a></li>
+        <li><a href="/terms-policy"><i class="fa fa-fa fa-eye-slash"></i> privacy policy</a></li>
+    </ul>
+</div> 
+</nav>
+
+
+<body>
+    <style>
+        body{
+            padding-top: 50px;
+        }
+        h5{
+            color: aliceblue;
+            display: inline;
+        }
+       
+        p{
+            color: aliceblue;
+        }
+        
+        .sidebar{
+            margin-top:10px;
+            text-align: left;
+        }
+        #adds img{
+            border-radius: 5px;
+        }
+        .navlogo h1{
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: oblique;
+        color: #ff3e0e;
+        }
+        section{
+            padding: 20px;
+            line-height: 2;
+        }
+        footer{
+            width: 100%;
+        }
+    </style>
+<section class="container">
+       
+        <h1>Privacy Policy:</h1>
+
+        At our social-media application, we take your privacy seriously. <br>
+        This Privacy Policy explains how we collect, use, and disclose your<br>
+        personal information. By using our application, you consent to our Privacy Policy.
+        
+       <h3>1. Information We Collect</h3>
+        We may collect the following types of personal information from you:<br>
+        - Name, email address, phone number, and other contact information<br>
+        - Username, password, and other login credentials<br>
+        - Profile information, such as your interests, hobbies, and location<br>
+        - Messages, photos, videos, and other content you post or upload<br>
+        - Usage data, such as your IP address, device type, and browser type<br>
+        - Payment information, such as credit card details, if you make purchases through our application<br>
+        
+        <h3>2. How We Use Your Information</h3>
+        We use your personal information for the following purposes:<br>
+        - To provide and improve our application<br>
+        - To communicate with you, including sending you notifications and updates<br>
+        - To personalize your experience and provide recommendations<br>
+        - To process payments and fulfill orders<br>
+        - To comply with legal obligations<br>
+        
+        <h3>3. Information Sharing and Disclosure</h3>
+        We may share your personal information with third parties in the following circumstances:<br>
+        - With your consent<br>
+        - With service providers who help us provide our application<br>
+        - To comply with legal obligations or to protect our rights or the rights of others<br>
+        - In connection with a merger, acquisition, or sale of assets<br>
+        
+        <h3>4. Data Retention</h3>
+        We will retain your personal information for as long as necessary to fulfill the purposes for which it was collected<br>
+        unless a longer retention period is required by law.<br>
+        
+        <h3>5. Your Rights</h3>
+        You have the right to access, correct, and delete your personal information.<br>
+         You also have the right to object to our processing of your personal information<br>
+          and to withdraw your consent at any time.
+        
+        <h1>Terms of Use:</h1>
+        
+        Welcome to our social-media application. These Terms of Use govern your use of our application.<br>
+         By using our application, you agree to these Terms of Use.<br>
+        
+        <h3>1. Eligibility</h3>
+        You must be at least 13 years old to use our application.<br>
+        
+        <h3>2. User Content</h3>
+        You are solely responsible for the content you post or upload to our application. <br>
+        You agree not to post or upload any content that is illegal, offensive, or infringes on the rights of others.<br>
+        
+        <h3>3. Intellectual Property</h3>
+        Our application and its content are protected by copyright, trademark, and other intellectual property laws.<br>
+         You may not copy, modify, distribute, or create derivative works of our application or its content without our permission.
+        
+        <h3>4. Prohibited Activities</h3>
+        You agree not to engage in the following activities:<br>
+        - Violating any laws or regulations<br>
+        - Hacking, phishing, or otherwise attempting to gain unauthorized access to our application or its users' accounts<br>
+        - Posting or uploading viruses, malware, or other harmful code<br>
+        - Impersonating another person or entity<br>
+        - Harassing or threatening others<br>
+        
+        <h3>5. Disclaimer of Warranties</h3>
+        Our application is provided "as is" and we make no warranties or representations of any kind, express or implied,<br>
+         including without limitation, warranties of merchantability, fitness for a particular purpose, or non-infringement.
+        
+        <h3>6. Limitation of Liability</h3>
+        We will not be liable to you or any third party for any damages arising from your use of our application.<br>
+        
+        <h3>7. Indemnification</h3>
+        You agree to indemnify and hold us harmless from any claims, damages, or expenses arising from your use <br>
+        of our application or your violation of these Terms of Use.
+        
+       <h3>8. Modification of Terms</h3>
+        We may modify these Terms of Use at any time.<br>
+        Your continued use of our application after any such modifications will constitute your acceptance of the modified terms.
+        
+        <h3>9. Termination</h3>
+        We may terminate your access to our application at any time, for any reason, without notice.
+        
+        <h3>10. Governing Law</h3>
+        These Terms of Use shall be governed by and construed in accordance with the laws of Kenya, <br>
+        without giving effect to any principles of conflicts of law. <br>
+        Any disputes arising out of or related to these Terms of Use or your use of our application shall be resolved <br>
+        in the state or federal courts located in milimani law courts. <br>
+        You consent to jurisdiction and venue in such courts and waive any objection to such jurisdiction and<br>
+        venue based on forum non conveniens or any other grounds. The United Nations Convention on Contracts for the<br>
+        International Sale of Goods does not apply to these Terms of Use.     <br> 
+<br/></br/>
+
+</section>
+<footer>
+    
+    <div id="copywrite">
+        <p>UPLOAD VIDEOS AND EARN Ksh 5.00 PER VIEW</p>
+        <p>ALL VIDEOS ARE ALLOWED EXCEPT NUDITY AND EXTREAMISM!!!</p>
+        <p>&copy TalantaHella</p>
+    </div>
+
+</footer>
+<script src="{% static 'nav.js' %}"></script>
+<script src="{% static 'main.js' %}"></script>
+
+</body>
+</html>

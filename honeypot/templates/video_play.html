@@ -1,0 +1,270 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" lang="en"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenyahoneypot.com</title>
+    <link rel="stylesheet" href="{% static 'styl.css' %}"/>
+    <link rel="stylesheet" href="{% static 'account.css' %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<nav class="navigation">
+    <div id="topnav" >
+        <div class="navbar">
+            <a  href="/" ><div class="navlogo"> <h3>Kenyans</h3><h4>Online</h4> <h1>K O</h1></div></a>
+        </div>
+   
+       </div>  
+    <div id="smallnav">   
+        
+        <a id="adds" href="/acc-profile">PROFILE</a>
+        
+        <br><br>
+        <form method="POST" action="/search">
+            {% csrf_token %}
+            <input type="search" action="/search" class="search" placeholder="search" name="searched"><button type="submit" class="searchbutton"><i class="fa fa-search" font-size="18px"></i></button>      
+        </form> 
+    </div>
+     
+    <div id="nav1">
+            
+                <a href="/">Home</a>&nbsp;
+                <a href="/recommended">Recommended</a>&nbsp;
+          
+            
+                <a href="/livechat">Trending</a>&nbsp;
+
+                <a href="/livechat">Live</a>&nbsp;
+
+                <a href="/livechat">Leaked</a>&nbsp;
+            
+            
+                <a href="/hookup">Social-book</a>&nbsp;
+           
+                <a href="/shotss">Shots</a>
+                <a href="/terms-policy">Privacy</a>
+                
+                <a id="adds" href="/acc-profile">PROFILE</a>
+               
+                <br><br>
+                <form method="POST" action="/search">
+                {% csrf_token %}
+                    <input type="search" action="/search" class="search" placeholder="search" name="searched"><button type="submit" class="searchbutton"><i class="fa fa-search"></i></button>      
+                </form>     
+    </div>    
+    
+    <label>
+    <a href="logout" height="40px"><i class="fa fa-sign-out" id="btnn">out</i></a>
+    </label>
+
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fa fa-bars" id="btn"></i>
+        <i class="fa fa-times" id="cancel"></i>
+    </label>
+
+<div class="sidebar">
+    
+
+    <header class="navbar"><h3>Kenyans</h3><h4>Online</h4></header>
+
+    <ul>
+        <li><a href="/" ><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="/livechat"><i class="fa fa-comments"></i>live-chat</a></li>
+        <li><a href="/hookup" ><i class="fa fa-address-card"></i> Social-book</a></li>
+        <li><a href="/shotss" ><i class="fa fa-camera-retro"></i> Shots</a></li>
+        <li><a href="/acc-profile"><i class="fa fa-user-circle-o"></i> Profile</a></li>
+        <li><a href="/terms-policy"><i class="fa fa-fa fa-eye-slash"></i> privacy policy</a></li>
+    </ul>
+</div> 
+</nav>
+
+
+<body>
+    <style>
+        body{
+            padding-top: 60px;
+        }
+        h5{
+            color: aliceblue;
+            display: inline;
+        }
+        .product-box a{
+            color: rgb(247, 247, 247);
+        }
+        .product-box a:hover{
+            color: rgb(255, 15, 7);
+        }
+        p{
+            color: aliceblue;
+        }
+        .videos-text{
+            margin: 10px;
+        }
+        .videos-text a{
+            margin: 10px;
+            color: rgb(250, 246, 245);
+            font-size: 14px;
+            font-weight: 200;
+        }
+        .videos-text a:hover{
+            margin: 10px;
+            color: rgb(255, 251, 0);
+        }
+        .inlinevideo{
+            display: flex;
+        }
+        .videoplay{
+            width: 67%;
+            height: auto;
+            margin-top: 5px;
+            display: inline-block;
+            margin-bottom: 1px;
+            padding: 10px;
+        }
+        
+        .advert{
+            width: 25%;
+            height: 500px;
+            display: inline-block;
+            vertical-align: top;
+            right: 10px;
+            margin-bottom: 30px;
+            margin-top: 10px;
+        }
+        .advert img{
+            margin: 5px;
+        }
+        .comments{
+            width: 60%;
+            margin: 30px;
+            margin-top: 10px;
+        }
+        .comments textarea{
+            width: 90%;
+            height: 100px;
+        }
+        .comment{
+                margin: 20px;
+                width: 60%;
+            }
+        
+        .comment p{
+            font-size: 14px;
+            font-style: italic;
+        }
+        .br{
+                border-radius: 10px;
+                border: 1px sold red;
+                overflow: hidden;
+            }
+
+        .product-imgg{
+            width: 95%;
+            border-radius: 5px;
+        }
+  
+        footer{
+            width: 100%;
+        }
+        @media(max-width:1000px){
+            .videoplay{
+            width: 100%;
+            padding: auto;
+            margin-top: 30px;
+            }
+            .advert{
+            display: none;
+            }
+            .comments{
+                width: 100%;
+            }
+            .comment{
+                margin-left: 20px;
+                width: 100%;
+            }
+            .product-imgg{
+                width: 98%;
+                border-radius: 5px;
+            }
+        }
+    </style>
+<section class="container">
+    
+    <div class="videoplay"> 
+    {% for post in posts %}
+    
+            <video src="{{post.main_img.url}}" controls ="controls"  width="100%" alt="product-img" class="product-imgg"><br>
+            </video>
+            <div class="videos-text">
+            <p><h4>Video:</h4><h5> {{post.details}}</h5></p>
+            <p><h4>User:</h4> <a href="/profile/{{post.user}}">{{post.user}}</a> <h4>Views: </h4><h5>{{post.no_of_views}} </h5><br><h4> Posted: </h4><h5>{{post.created_at|timesince}} ago</h5></p>
+            </div>
+        
+    {% endfor %}
+
+    
+    </div>
+    <div class="advert">
+        you might consider viewing these services
+        <img class="br" src="{% static 'images/logo.png' %}" height="33%" width="100%" value="Quickyhomes">
+        <img class="br" src="{% static 'images/honeypot.jpg' %}" height="33%" width="100%">
+        <img class="br" src="{% static 'images/lovehoneypot.jpg' %}" height="33%" width="100%">
+    </div>
+
+
+    <div class="comments">
+        Comments {{user_post_length}}
+        <form class="form" action="" method="POST">
+            {% csrf_token %}
+                    <label><h4>Enter Your comment</h4></label><br>
+                    <textarea type="text" id="username" name="text" required></textarea><br>
+                    <button type="submit"><h4>POST</h4></button>
+            </form>
+
+    </div><br><br>
+
+    <div class="comment">
+        
+        {% for comment in comments reversed %}
+        <h4>{{comment.user}}</h4>&nbsp; &nbsp; <h5>{{comment.created_at|timesince}} ago</h5>
+        <p>{{comment.text}}<p><br>
+        
+        {% endfor %}
+    </div>
+    
+    <h2>Related Videos:</h2>
+    <ul>
+    {% for post in related_videos %}
+    <div class="posts">
+        <a href="/video_play/{{post.id}}">
+            <video src="{{post.main_img.url}}" height="120px" width="150px"></video>
+            <p>Video: {{post.details|truncatewords:7}}</p>
+        </a>
+        </div>
+    {% endfor %}
+    </ul>
+        
+    
+    
+<br/></br/>
+<br/>
+
+
+</section>
+<footer>
+    
+    <div id="copywrite">
+        <p>UPLOAD VIDEOS AND EARN Ksh 300 PER 1000 VIEWs</p>
+        <p>ALL VIDEOS ARE ALLOWED EXCEPT NUDITY AND EXTREAMISM!!!</p>
+        <p>&copy TalantaHella</p>
+    </div>
+
+</footer>
+<script src="{% static 'nav.js' %}"></script>
+<script src="{% static 'main.js' %}"></script>
+
+</body>
+</html>

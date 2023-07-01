@@ -1,0 +1,1018 @@
+:root{
+
+  --bg-black-900:#2b2b2c;
+  --bg-black-100:#fdf9ff;
+  --bg-black-50:#d1d1d1;
+  --bg-black-200:rgb(3, 4, 26);
+  --text-black-700:#0f0f0f;
+  --text-black-900:#000000;
+  --bg-black-700: whitesmoke;
+  }
+
+  body.dark{
+    --bg-black-900:#000000;
+    --bg-black-100:#1b191b;
+    --bg-black-50:#040d22da;
+    --bg-black-200:rgb(12, 12, 32);
+    --bg-black-700:rgb(157, 202, 240);
+    --text-black-700:#f4f4f8;
+    --text-black-900:#f0f0f0;
+   
+}
+  
+  body{
+      color: var(--text-black-700);
+      background-repeat: no-repeat;
+      background-color: var(--bg-black-100);
+      margin: 0 auto;
+      font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
+      --navigatio-height: 80px;
+  }
+
+  #topnav{
+    width: 10%;
+    
+  }
+  nav{
+    background:  var(--bg-black-50);
+    width: 100%;
+    display: flex;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    z-index: 1;
+    flex: 0 0 100%;
+    height: 80px;
+    color: var(--skin-color);
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 3px 3px 2px 2px var(--bg-black-900);
+    transition: all 1.5s ease;
+    border-bottom: 2px black;
+  }
+  .navlogo{
+    width: 65px;
+    margin-left: 10%;
+    margin-top: 5px;
+  }
+  .navlogo h1{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    color: #ff3e0e;
+  }
+  .navbar h4{
+    display: inline;
+    font-size: 14px;
+    font-weight: 300;
+    background-color: #ff3e0e;
+    color:  rgb(226, 217, 209) ;
+    margin: 0;
+    border-top-right-radius: 10px;
+    padding: 2px;
+  }
+  .navbar h3{
+    display: inline;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(255, 231, 16);
+    background-color: rgb(255, 51, 0);
+    margin-bottom:1px;
+    border-top-left-radius: 10px;
+    padding: 2px;
+  }
+  
+  .navbar {
+    margin-top: -25px;
+    
+  }
+  .navigation--hidden{
+    transform: translateY(100px);
+    box-shadow: none;
+  }
+  #nav1{
+    width: 80%;
+    padding-top: 1px;
+  }
+  .navlinks{
+    width: 100%;
+    height: 60%;
+    overflow-y: hidden;
+  }
+  
+  .searching{
+    width: 100%;
+    height: 40%;
+  }
+  #smallnav{
+    display: none;
+  }
+
+  .aside_profile{
+    margin-top: 60px;
+    padding: 10px;
+    position: fixed;
+    margin-left: 10px;
+    float: left;
+    height: 500px;
+    overflow: scroll;
+    width: 20%;
+    background-color: var(--bg-black-50);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 3px var(--bg-black-900);
+  }
+  .fixed{
+    display: inline-block;
+    width: 250px;
+    height: 35px ;
+    overflow: hidden;
+    
+    border-radius: 10px;
+    top: 5px;
+    position: relative;
+    background-color: rgb(255, 230, 0);
+  }
+  #adds{
+    margin-top:-10px;
+    margin-left: 10%;
+    width: 40%;
+    font-size: 16px;
+    float: left;
+    font-weight: 300;
+    color:#ff3e0e;
+  }
+  #smallnav button #linkbtn{
+    margin-top: 10px;
+    float: right;
+    width: 25%;
+  }
+  .profilepic{
+    border-radius: 10px;
+    height: 20px;
+    width: 20px;
+  }
+  
+  .account_table{
+    overflow: scroll;
+    width: 500px;
+    margin-left: 1px;
+    /*background-color: #110f0f;*/
+  }
+  table{
+    width: 500px;
+  }
+  table tr{
+    border-bottom: 1px red;
+    background-color: #444343;
+  }
+  a{
+    font-size: 16px;
+    font-weight: 100;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: var(--text-black-700);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+    
+  }
+  a:hover{
+    font-size: 16px;
+    color: var(--skin-color);
+    font-weight: 600;
+  }
+  p{
+    color: var(--text-black-700);
+  }
+  .welcome-note{
+    text-align: center;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-style: italic;
+    line-height: 2;
+  }
+  
+   
+   form .location {
+    text-transform: var(--text-black-700);
+   } 
+   
+   .location input{
+    margin-top: 30px;
+    width: 150px;
+    height: 30px;
+   }
+   #mysearch{
+    height: 30px;
+    width:80%;
+    margin-top: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px 3px var(--bg-black-50);
+  }
+  .services{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  #service{
+    width:80%;
+    margin:0 auto;
+    margin-bottom: 50px;
+    background-color: var(--bg-black-50);
+    box-shadow: 2px 3px 4px 4px var(--bg-black-100);
+    color: black;
+    font-size: larger;
+    line-height: 2;
+  }
+  
+  /*account */
+  .accountform{
+    display: inline-flex;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--bg-black-100);
+    box-shadow: 2px 2px 3px 3px var(--bg-black-900);
+    padding-bottom: 30px;
+  }
+  .accountform form{
+    width: 30%;
+    margin: 0 auto;
+    display: inline-block;
+    margin-left: 50px;
+    line-height: 1.5;
+    margin-bottom: 50px;
+    left: 10px;
+  }
+  .account-form{
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: inline-block;
+  }
+
+
+  .account-form h4{
+    margin-left: 1px;
+    text-align: left;
+  }
+
+  .account-details{
+    margin-top: 10px;
+    padding: 5px;
+    line-height: 2;
+    font-size: 14px;
+  }
+  .account-details h4{
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 100;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: var(--skin-color);
+    padding: 5px;
+    
+}
+
+  .account-details h4:hover{
+    text-transform: uppercase;
+    background-color: var(--bg-black-900);
+  }
+  #thead{
+    background-color: #dd4f2cee;
+  }
+  table td{
+    margin: 5px;
+    width: 100px !important;
+    height: 30px;
+    overflow: hidden;
+  }
+  #names{
+    width: 100px !important;
+    
+  }
+  
+  .wallpaper img{
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    width: 80%;
+    border-radius: 10%;
+  }
+
+  
+  textarea{
+    height: 100px;
+    width: 300px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--bg-black-900);
+    color: var(--text-black-700);
+  }
+
+  form textarea{
+    height: 100px;
+    width: 300px;
+  }
+  input{
+    width: 340px;
+    border-radius: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--bg-black-900);
+    color: var(--text-black-700);
+  }
+  #loginform{
+    margin: 0 auto;
+    width: 400px;
+    padding-top: 30px;
+    background-color: var(--bg-black-100);
+    color: var(--text-black-700);
+    box-shadow: 3px 3px 3px 4px var(--bg-black-900);
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  /*house uplods*/
+  .houses{
+    margin: 0 auto;
+    padding-top: 130px;
+    margin-bottom: 50px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: var(--bg-black-100);
+    color: var(--text-black-700);
+    box-shadow: 2px 2px 3px 3px var(--bg-black-50);
+  }
+  .houses form{
+    margin: 0 auto;
+  }
+  .acountinfo{
+    
+    background: linear-gradient();
+    color: #ffffff;
+    top: 1px;
+    height: 100%;
+    margin: auto;
+    position: fixed;
+    display: none;
+    z-index: 2;
+  }
+ 
+  .accountinfo h1{
+    color: var(--text-black-700);
+    
+  }
+  .accountinfo h2{
+    color: var(--text-black-700);
+    text-align: center;
+  }
+  .services h3{
+    color: var(--skin-color);
+    
+  }
+  .services h2{
+    color: var(--text-black-700);
+  }
+  #payment{
+    width:400px;
+    height:500px;
+    margin: auto;
+    color: var(--text-black-700);
+    background-color: var(--bg-black-100);
+  }
+  
+  #terms{
+    margin: 1px;
+    width: auto;
+    bottom: 1px;
+  }
+  #submit{
+     background-color: var(--skin-color);
+     color: var(--text-black-700);
+     cursor: pointer;
+     font-size: larger;
+     border-radius: 5px;
+  }
+  #submit:hover{
+    color: blue;
+    font-weight: 500;
+    background-color: greenyellow;
+  }
+  
+  #table{
+    border-radius: 10px;
+    background: linear-gradient(to right, rgb(29, 49, 54), rgb(13, 18, 70));
+    color: #fefefe;
+    gap: 40px;
+    margin: 0 auto;
+    height: 400px;
+    width: 300px;
+  }
+  #database{
+    background-color: linear-gradient(to right, rgb(29, 49, 54), rgb(13, 18, 70));
+  }
+  
+  ::-webkit-scrollbar{
+    display: none;
+  }
+  section {
+      margin: 5px;
+      padding-top: 20px;
+      
+  }
+  .paginator{
+    width: 75%;
+    float: right;
+    bottom: 20px;
+    text-align: center;
+  }
+  .paginator a{
+    background-color: var(--skin-color);
+  }
+  section a{
+    color: blue;
+  }
+  #house1{
+    display:none;
+  }
+  footer{
+    margin: 20px;
+    margin-top: 30px;
+    bottom: 10px;
+    width: 75%;
+    float: right;
+    color: var(--text-black-700);
+  }
+  .logos{
+    width: 28%;
+    height: 250px;
+    display: inline-block;
+  }
+  .logos1{
+    width: 28%;
+    height: 250px;
+    display: inline-block;
+  }
+  .text{
+    width: 40%;
+    margin-top: 5%;
+    display: inline-block;
+    vertical-align: top;
+    color: var(--text-black-700);
+  }
+  .footter{
+      height:auto;
+      background: linear-gradient(to right, rgb(29, 49, 54), rgb(13, 18, 70));
+      color: #fefefe;
+  }
+ 
+  h1{
+    font-size: 16px;
+    font-weight: 700;
+    background-color: var(--skin-color);
+    border-radius: 10px;
+    border-bottom: 1px solid rgb(248, 14, 14);
+    text-align: center;
+    color: rgb(250, 250, 250);
+}
+  h3{  
+    color: var(--skin-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    font-weight: 200;
+  }
+  #black{
+      border-bottom: 1px solid rgb(248, 14, 14);
+      text-align: center;
+      color: var(--text-black-700);
+      background-color: var(--bg-black-900);
+  }
+  h2{
+    border-bottom: 1px solid rgb(248, 14, 14);
+    margin: auto;
+    color: var(--text-black-700);
+  }
+  
+  
+  a:hover{
+    color: var(--skin-color);
+  }
+  
+  
+  #asidenav{
+    margin: 0 0 auto;
+    height: 30px;
+    width: 10%;
+    display: inline-block;
+    border: 1px;
+    border-radius: 10px;
+    color: var(--skin-color);
+    box-shadow: 3px 4px 3px 3px rgb(22, 4, 4);
+    text-align: center;
+  }
+  
+  
+  
+  .product-box{
+      margin: 10px auto;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 320px;
+      line-height: 1.25;
+      background-color: var(--bg-black-50);
+      color: var(--text-black-700);
+      border-radius: 5px;
+      box-shadow: 2px 2px 2px 3px var(--bg-black-900);
+  }
+  .product-box a{
+    background-color: none;
+  }
+  .product-box p{
+    line-height: 0.8;
+  }
+  .product-img{
+    width: 95%;
+    border: 1px var(--bg-black-100);
+    border-radius: 5px;
+  }
+  
+  
+  #copywrite{
+    text-align: center;
+  }
+  #tenant{
+    cursor: pointer;
+    width: 100px;
+    margin-left: 30px;
+    margin-top: 5px;
+    border-radius: 10px;
+    box-shadow: 3px 4px 3px 3px rgb(30, 4, 4);
+    overflow: hidden;
+  }
+  
+  
+  .main-section{
+      width: 75%;
+      float: right;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(310px,auto));
+      align-items: center;
+      justify-content: center;
+      justify-items: center;
+      overflow: hidden;
+      margin-top: 20px;
+  }
+  
+  #left{
+      float:right;
+      cursor: pointer;
+      background-color: black;
+      color: azure;
+      font-size: 25px;
+      display: inline;
+  }
+  h4{
+      width: 50px;
+      font-size: 14px;
+      display: inline;
+      color: var(--skin-color);
+      font-weight: 200;
+  }
+  .description{
+    font-size: larger;
+    color: var(--text-black-700);
+  }
+  .houses form{
+    margin: 0 auto;
+  }
+    label{
+      color: var(--skin-color);
+      font-size: larger;
+      margin-top: 20px;
+     
+    }
+    input{
+      width: 300px;
+      height:25px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    #box input{
+      margin-right: 2px;
+    }
+    .psw a{
+      font-size: 16px;
+      color: blue;
+      background-color: #fefefe;
+    }
+    
+    button{
+      border-radius: 10px;
+      background-color: #ff3e0e;
+      color: aliceblue;
+      width: 80px;
+      cursor: pointer;
+    }
+    #bookings{
+      background-color: #fefefe;
+      color: rgb(0, 0, 0);
+      justify-content: center;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    
+    /* Close button on hover */
+    .close:hover,
+    .close:focus {
+      color: red;
+      cursor: pointer;
+    }
+    
+    /* Add Zoom Animation */
+    .animate {
+      -webkit-animation: animatezoom 0.6s;
+      animation: animatezoom 0.6s
+    }
+    #contactsinfo{
+      margin: 10px;
+      display: inline-block;
+      width: 30%;
+    }
+    #centreinfo{
+      margin: 10px;
+      display: inline-block;
+      width: 30%;
+    }
+    #comments{
+      margin: 10px;
+      display: inline-block;
+      width: 30%;
+    }
+    #navmenu{
+      display:none;
+      background-color: azure;
+      float:right;
+      color: red;
+      width: 60px;
+      height:40px;
+      font-size: large;
+      cursor:pointer;
+    }
+    
+    ul a{
+      background-color: whitesmoke;
+      color: #000000;
+    }
+    #more{
+      text-align: center;
+      height: 40px;
+      color: #ffffff;
+      background-color:  rgb(13, 18, 70);
+      width: 100%;
+      font-weight: 700;
+      font-size: 20px;
+      cursor: pointer;
+      border: none;
+    }
+    .moredetails{
+      display: none;
+    }
+    /*chating app*/
+    .chats{
+      margin-top: 50px;
+      height: 650px;
+      width: 100%;
+      display: flex;
+      position: absolute;
+    }
+    .chat-connects{
+      height: 100%;
+      width: 30%;
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      border: 1px var(--bg-black-50);
+      border-radius: 7px;
+    }
+    .search-connects{
+      height: 30px;
+      width: 100%;
+      border: 1px whitesmoke;
+      border-radius: 7px;
+      margin: 5px auto;
+      margin-right: 20px;
+      padding: 10px;
+      background-color: whitesmoke;
+    }
+    .connects{
+      margin-top: 30px;
+      margin: 10px;
+      height: 540px;
+      border: 1px var(--bg-black-700);
+      border-radius: 7px;
+      background-color: whitesmoke;
+    }
+    .chat-messages{
+      height: 100%;
+      margin: 20px;
+      width: 67%;
+      border: 1px white;
+      border-radius: 7px;
+    }
+    .row-pic{
+      height: 50px;
+      width: 100%;
+      margin: 10px auto;
+      background-color: rgb(245, 227, 227);
+      border-radius: 7px;
+    }
+    .pic-1{
+      float: left;
+      height: 50px;
+      width: 50px;
+      background-color: #000000;
+      border: 1px rgb(3, 3, 3);
+      border-radius: 100%;
+    }
+    .pic-2{
+      float: right;
+      height: 50px;
+      width: 50px;
+      background-color: #000000;
+      border: 1px rgb(5, 4, 4);
+      border-radius: 100%;
+    }
+    .message-body{
+      height: 70vh;
+      width: 100%;
+      margin: 10px auto;
+      border: 1px white;
+      background-color: whitesmoke;
+      border-radius: 7px;
+
+    }
+    .messages{
+      width: 100%;
+      height: 10vh;
+      margin: 10px auto;
+      margin-bottom: 20px;
+      background-color: whitesmoke;
+      border-radius: 7px;
+    }
+    .search{
+      width: 40%;
+      height: 30px;
+      margin: 0 auto;
+      background: var(--bg-black-700);
+      border: 1px black;
+      border-radius: 10px;
+      text-align: left;
+      margin-bottom: 10px;
+      display:inline-block;
+      color: var(--text-black-700);
+      font-size: 16px;
+  }
+   .searchbutton{
+      border-radius: 10px;
+      width: 30px;
+      height: 30px;
+  }
+    @-webkit-keyframes animatezoom {
+      from {-webkit-transform: scale(0)}
+      to {-webkit-transform: scale(1)}
+    }
+    
+    @keyframes animatezoom {
+      from {transform: scale(0)}
+      to {transform: scale(1)}
+    }
+    @media (max-width:900px){
+        footer{
+          width: 100%;
+        }
+        .paginator{
+          width: 100%;
+        }
+        .main-section{
+          width: 100%;
+          gap: 10px;
+          display: grid;
+          grid-template-columns: repeat(auto-fit,minmax(350px,auto));
+        }
+        .product-box{
+          width: 350px;
+          margin: 10px;
+        }
+        .location{
+          font-size: 14px;
+        }
+        .location input{
+          width: 130px;
+          margin-top:20px;
+        }
+        .accountform{
+          display: block;
+        }
+        .accountform form{
+          width: 100%;
+          display: block;
+        }
+        .account-details{
+          width: 100%;
+          display: block;
+          margin-left: 2px;
+        }
+
+        .aside_profile{
+          display: none;
+        }
+    }
+    @media (max-width:720px){
+      #nav1 {
+        display: none;
+      }
+      .search{
+        display: block;
+      }
+      #smallnav{
+        display: block;
+        font-size: 16px;
+        width: 80%;
+      }
+      .location{
+        font-size: 12px;
+      }
+      .location input{
+        width: 100px;
+        margin-top:20px;
+      }
+      .main-section{
+        gap: 5px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(280px,auto));
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        overflow: hidden;
+    }
+      .product-box{
+        width: 100%;
+        margin: auto;
+      }
+      .account-details{
+        width: 100%;
+        display: block;
+        margin: 2px, auto;
+      }
+      .account_table{
+        width: 500px;
+        overflow:scroll;
+        margin: 1px;
+        margin: 1px;
+    }
+  }
+  @media(max-width:600px){
+      #smallnav{
+        display: block;
+        float: right;
+        font-size: 12px;
+        width: 70%;
+      }
+      .location{
+        font-size: 12px;
+      }
+      .location input{
+        width: 80px;
+        margin-top:20px;
+      }
+      .main-section{
+        gap: 5px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(280px,auto));
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        overflow: hidden;
+    }
+      .product-box{
+        width: 100%;
+        margin: auto;
+      }
+      .topnav{
+        width: 30%;
+      }
+      .search{
+        width: 70%;
+        margin-left: 10%;
+        margin-bottom: 10px;
+        display:inline-block;
+        font-size: 16px;
+    }
+     .searchbutton{
+        border-radius: 10px;
+        width: 30px;
+        height: 30px;
+    }
+    
+    }
+    @media(max-width:550px){
+      .location{
+        font-size: 10px;
+      }
+      .location input{
+        width:70px;
+        margin-top:20px;
+      }
+        #centreinfo,
+        #comments,
+        #contactsinfo{
+          width: 100%;
+        }
+        .houses
+        {
+          width: 400px;
+        }
+        .product-box{
+          width: 100%;
+          margin: auto;
+        }
+        .main-section{
+          grid-template-columns: repeat(auto-fit,minmax(400px,auto));
+          align-items: center;
+          justify-content: center;
+          justify-items: center;
+          overflow: hidden;
+      }
+      .account-details{
+       margin: 1px;
+       overflow: scroll;
+      }
+      .account_table{
+        width: auto;
+      }
+      .logos1{
+        display: none;
+      }
+      .logos{
+        width: 90%;
+      }
+      .text{
+        width: 100%;
+        padding: 20px;
+        margin-top: 1%;
+      }
+    
+  #nav1-active{
+    transform: translateX(0%);
+  }
+  .paginator a{
+    padding: 2px;
+  }
+}
+  @media (max-width:480px){
+    .location{
+      font-size: 10px;
+    }
+    .location input{
+      width:50px;
+      margin-top:20px;
+    }
+    .product-box{
+      margin: auto;
+    }
+    
+  }
+  @media (max-width:440px){
+    .location{
+      font-size: 8px;
+    }
+    .location input{
+      width:40px;
+      margin-top:20px;
+    }
+    .product-box{
+      margin: auto;
+    }
+    .houses{
+      width: 380px;
+    }
+    #smallnav{
+      display: block;
+      float: right;
+      font-size: 12px;
+      width: 70%;
+    }
+    #topnav{
+      width: 20%;
+    }
+  }

@@ -1,0 +1,218 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" lang="en"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenyahoneypot.com</title>
+    <link rel="stylesheet" href="{% static 'styl.css' %}"/>
+    <link rel="stylesheet" href="{% static 'account.css' %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<nav class="navigation">
+    <div id="topnav" >
+        <div class="navbar">
+            <a  href="/" ><div class="navlogo"> <h3>Kenyans</h3><h4>Online</h4> <h1>K O</h1></div></a>
+        </div>
+   
+       </div>  
+    <div id="smallnav">   
+        {% for user in user_profile %}
+        <a id="adds" href="/acc-profile"><img src="{{user.profileimg.url}}" height="20px" width="30px">PROFILE</a>
+        {% endfor %}
+        <br><br>
+        <form method="POST" action="/profile-search">
+            {% csrf_token %}
+            <input type="search" action="/profile-search" class="search" placeholder="search" name="searched"><button type="submit" class="searchbutton"><i class="fa fa-search" font-size="18px"></i></button>      
+        </form> 
+    </div>
+     
+    <div id="nav1">
+            
+                <a href="/">Home</a>&nbsp;
+                <a href="/recommended">Recommended</a>&nbsp;
+          
+            
+                <a href="/livechat">Trending</a>&nbsp;
+
+                <a href="/livechat">Live</a>&nbsp;
+
+                <a href="/livechat">Leaked</a>&nbsp;
+            
+            
+                <a href="/hookup">Social-book</a>&nbsp;
+           
+                <a href="/shotss">Shots</a>
+                <a href="/terms-policy">Privacy</a>
+                {% for user in user_profile %}
+                <a id="adds" href="/acc-profile"><img src="{{user.profileimg.url}}" height="20px" width="30px">Profile</a>
+                {% endfor %}
+                <br><br>
+                <form method="POST" action="/profile-search">
+                {% csrf_token %}
+                    <input type="search" action="/profile-search" class="search" placeholder="search" name="searched"><button type="submit" class="searchbutton"><i class="fa fa-search"></i></button>      
+                </form>     
+    </div>    
+    
+    <label>
+    <a href="logout" height="40px"><i class="fa fa-sign-out" id="btnn">out</i></a>
+    </label>
+
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fa fa-bars" id="btn"></i>
+        <i class="fa fa-times" id="cancel"></i>
+    </label>
+
+<div class="sidebar">
+    
+
+    <header class="navbar"><h3>Kenyans</h3><h4>Online</h4></header>
+
+    <ul>
+        <li><a href="/" ><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="/livechat"><i class="fa fa-comments"></i>live-chat</a></li>
+        <li><a href="/hookup" ><i class="fa fa-address-card"></i> Social-book</a></li>
+        <li><a href="/shotss" ><i class="fa fa-camera-retro"></i> Shots</a></li>
+        <li><a href="/acc-profile"><i class="fa fa-user-circle-o"></i> Profile</a></li>
+        <li><a href="/terms-policy"><i class="fa fa-fa fa-eye-slash"></i> privacy policy</a></li>
+    </ul>
+</div> 
+</nav>
+
+<div class="aside_profile">
+    <div class="account-form">
+        {% for user in user_profile %}
+            <div id="agentdata">
+            <label><h4>{{user.agentname}}</h4></label><br>
+            <div class="wallpaper">
+            <img src="{{user.profileimg.url}}" height="150px" width="150px"/>
+            </div>
+            </div>
+            <div id="agentdetails">
+            <label><h4> LOCATION</h4>{{user.location}}<br>
+            </div>
+        {% endfor %}
+   <div class="account-details">
+        <div>
+            <a href="/Houseupload"><h4>Upload VIDEOs</h4></a><br>
+            <a href="/Shot"><h4>Upload SHOTs</h4></a>
+
+        </div><br>
+        <div class="fixed">  
+                {% for post in user_posts %}
+                <a id="adds" href="/account/{{post.user}}">ACCOUNT-DETAILS</a>
+                {% endfor %}  
+        </div>
+
+   </div>
+</div>
+<div class="subscription">
+    <h4>Subscriptions</h4>
+  {% if subscriptions %}
+    <ul>
+      {% for subscription in subscriptions %}
+        <li>{{ subscription.user.username }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>You are not subscribed to anyone yet.</p>
+  {% endif %}
+</div>
+<h4>Connections</h4><br>
+<h4>Messages</h4><br>
+<h4>Notifications</h4><br>
+</div>
+
+<body>
+    <style>
+    body{
+        margin-top: 80px;
+    
+    }
+    .product-box{
+        height: 400px;
+        max-width: 350px;
+    }
+    
+    .profile-box{
+        height: 90%;
+        width: 90%;
+        border-radius: 5px;
+        background-color: var(--bg-black-900);
+        line-height: 1.5;
+        overflow: scroll;
+        padding: 10px;
+    }
+    .profile-box img{
+        border-radius: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    h4{
+        color: rgb(85, 218, 33);
+        font-weight: 100;
+    }
+    h3{
+        color: aliceblue;
+        font-weight: 100;
+        font-size: 14px;
+    }
+    label{
+        font-size: 14px;
+    }
+    h2{
+        font-weight: 100px;
+        font-size: 12px;
+        color: rgb(255, 187, 0);
+        border: none;
+        margin-top: 20px;
+    }
+    h5{
+        color: red;
+    }
+    </style>
+    
+    <div class="main-section" id="houses">
+        {% for message in messages %}
+        <h5>{{message}}</h5>
+        {% endfor %}
+
+        {{message}}
+
+    {% for post in profile %}
+        <div class="product-box">
+            <div class="profile-box">
+            <label><h4>Profile-Name </h4> {{post.agentname}}</label><br>
+            <label><h4> Profile Picture.</h4></label><br>
+            <img src="{{post.profileimg.url}}" height="180px" width="160px"/><br>
+            <label><h4> ABOUT {{post.agentname}} </h4></label><br>
+            <label>{{post.bio}}</label><br>
+            <label><h4> LOCATION</h4></label><br>
+            <label>{{ post.location }}</label>
+            <h2>Request-CHAT</h2>
+            </div>
+        </div>
+    {% endfor %}
+
+    </div>
+
+
+<footer>
+    
+        <div id="copywrite">
+            <p>UPLOAD VIDEOS AND EARN Ksh 5.00 PER VIEW</p>
+            <p>ALL VIDEOS ARE ALLOWED EXCEPT NUDITY AND EXTREAMISM!!!</p>
+            <p>&copy TalantaMtaani</p>
+        </div>
+    
+</footer>
+    <script src="{% static 'nav.js' %}"></script>
+    <script src="{% static 'main.js' %}"></script>
+    
+</body>
+    
+</html>
+    

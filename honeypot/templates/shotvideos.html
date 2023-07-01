@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block shot-videos %}
+
+<body>
+    <style>
+        body{
+            padding-top: 50px;
+        }
+        h5{
+            color: aliceblue;
+            display: inline;
+        }
+        .product-box{
+            height: 700px;
+            width: 380px;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        .product-box a{
+            color: rgb(247, 247, 247);
+        }
+        .product-box a:hover{
+            color: rgb(255, 15, 7);
+        }
+        p{
+            color: aliceblue;
+        }
+        .videos-text{
+            margin: 10px;
+        }
+        .videos-text a{
+            margin: 10px;
+            color: rgb(250, 246, 245);
+            font-size: 14px;
+            font-weight: 200;
+        }
+        .videos-text a:hover{
+            margin: 10px;
+            color: rgb(255, 251, 0);
+        }
+    </style>
+<section class="container">
+       
+    {% for post in venues reversed %}
+    
+        <div class="product-box">
+            
+            <video src="{{post.main_img.url}}" controls ="controls" height="600px" width="100%" alt="product-img" class="product-img"><br>
+            </video>
+            <div class="videos-text">
+            <p><h4>Video:</h4><h5> {{post.details}}</h5></p>
+            <p><h4>User:</h4> <a href="/profile/{{post.user}}">{{post.user}}</a><br> <h4> Posted: </h4><h5>{{post.created_at}}</h5></p>
+            </div>
+        </div>
+    {% endfor %}
+<br/></br/>
+<br/>
+
+{% if venues.has_previous %}
+    <a href="?page=1">&laquo FIRST</a>
+    <a href="?page={{ venues.previous_page_number }}">PREV</a>
+
+{% endif %}
+
+page {{ venues.number }} of {{ venues.paginator.num_pages}}
+
+{% if venues.has_next %}
+
+    <a href="?page={{ venues.next_page_number }}">NEXT</a>
+    <a href="?page={{ venues.paginator.num_pages }}">LAST &raquo</a>
+
+{% endif %}
+
+</section>
+
+</body>
+{% endblock %}

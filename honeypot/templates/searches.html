@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block searches %}
+
+<div class="search">
+    <form method="POST" action="/search">
+        {% csrf_token %}
+            <input type="search" action="/search" class="search" placeholder="search" name="searched"><button type="submit" class="searchbutton">Se</button>      
+        </form>    
+</div>
+<body>
+    <style>
+        body{
+            padding-top: 50px;
+        }
+        h5{
+            color: aliceblue;
+            display: inline;
+        }
+        .product-box{
+            background-color: rgb(12, 12, 32);
+            width: 95%;
+            border: 1px solid grey;
+            padding-bottom: 10px;
+        }
+       
+        .product-box a{
+            color: rgb(247, 247, 247);
+        }
+        .product-box a:hover{
+            color: rgb(255, 15, 7);
+        }
+        p{
+            color: aliceblue;
+        }
+        .videos-text{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .videos-text a{
+            margin-left: 3px;
+            color: rgb(250, 246, 245);
+            font-size: 14px;
+            font-weight: 200;
+        }
+        .videos-text a:hover{
+            margin: 10px;
+            color: rgb(255, 251, 0);
+        }
+        .videodetails{
+            height: 40px;
+            overflow: hidden;
+        }
+        .sidebar{
+            margin-top:10px;
+            text-align: left;
+        }
+        
+        
+    </style>
+
+<div class="main-section">   
+
+   
+        {% for post in videos %}
+        <div class="product-box">
+                
+            <a href="video_play/{{post.id}} "><video src="{{post.main_img.url}}" controls="controls" height="70%" width="100%" alt="product-img" class="product-img"><br>
+                </video></a>
+                <div class="videos-text">
+                <div class="videodetails"><p><h4>Video:</h4><h5> {{post.details|truncatewords:7}}</h5></p></div>
+                <p><h4>User:</h4> <a href="/profile/{{post.user}}">{{post.user}}</a> <h4>Views: </h4><h5>{{post.no_of_views}} </h5><h4><br> Posted: </h4><h5>{{post.created_at|timesince}} ago</h5></p>
+                </div>
+            </div>
+        {% endfor %}
+    
+   
+</div>
+</body>
+{% endblock %}

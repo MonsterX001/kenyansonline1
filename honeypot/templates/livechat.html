@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Chat</title>
+
+        <link rel="stylesheet" href="{% static 'styl.css' %}">
+        <link rel="stylesheet" href="{% static 'account.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+
+    </head>
+	<nav class="navigation">
+        <div id="topnav" >
+            <div class="navbar">
+                <a  href="/" ><div class="navlogo"> <h3>Kenyans</h3><h4>Online</h4> <h1>K O</h1></div></a>
+            </div>
+       
+           </div>  
+        <div id="smallnav">   
+            <a id="adds"   href="/acc-profile">PROFILE</a><br><br>
+            <form method="POST" action="/search">
+                <input type="search" action="/search" class="search" placeholder="search" name="searched"><button type="submit" class="searchbutton">Se</button>      
+            </form> 
+        </div>
+         
+        <div id="nav1">
+                
+                    <a href="/">Home</a>&nbsp;
+              
+                
+                    <a href="/livechat">live-chat</a>&nbsp;
+                
+                
+                    <a href="/hookup">social-book</a>&nbsp;
+               
+                    <a href="/shotss">shots</a>
+                    <a href="/terms-policy">privacy</a>
+                     
+                    <a id="adds" href="/acc-profile">PROFILE</a> <br><br>
+                    <form method="POST" action="/search">
+                        <input type="search" action="/search" class="search" placeholder="search" name="searched"><button type="submit" class="searchbutton">Se</button>      
+                    </form>     
+        </div>    
+        
+        
+        <a href="logout" height="40px">logout</a>
+        
+    
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fa fa-bars" id="btn"></i>
+            <i class="fa fa-times" id="cancel"></i>
+        </label>
+    
+    <div class="sidebar">
+        
+    
+        <header class="navbar"><h3>Honey</h3><h4>Pot</h4></header>
+    
+        <ul>
+            <li><a href="/" ><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="/livechat"><i class="fa fa-link"></i>live-chat</a></li>
+            <li><a href="/hookup" ><i class="fa fa-link"></i> Social-book</a></li>
+            <li><a href="/shotss" ><i class="fa fa-link"></i> Shots</a></li>
+            <li><a href="/acc-profile"><i class="fa fa-link"></i> Profile</a></li>
+            <li><a href="/terms-policy"><i class="fa fa-link"></i> privacy policy</a></li>
+        </ul>
+    </div> 
+    </nav>
+</html>
